@@ -27,7 +27,7 @@ export default class Control extends React.Component {
     let initialCollections = []
     let headers = new Headers({
       'Content-Type': 'application/json',
-      'X-Store-Id': 1011
+      'X-Store-Id': STORE_ID
     })
     let options = {
       method: 'GET',

@@ -16,7 +16,7 @@ export default class Preview extends React.Component {
 
     let headers = new Headers({
       'Content-Type': 'application/json',
-      'X-Store-Id': 1011
+      'X-Store-Id': STORE_ID
     })
 
     let options = {
@@ -70,7 +70,7 @@ export default class Preview extends React.Component {
 
     let headers = new Headers({
       'Content-Type': 'application/json',
-      'X-Store-Id': 1011
+      'X-Store-Id': STORE_ID
     })
 
     let options = {
