@@ -1,6 +1,6 @@
 {
   "name": "@ecomplus/netlify-cms-widgets",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Collection of Netlify CMS widgets for storefront",
   "private": true,
   "main": "dist/main.js",
@@ -10,7 +10,7 @@
   "scripts": {
     "build": "NODE_ENV=production webpack",
     "serve": "webpack-dev-server",
-    "release": "rm -rf ./dist; npm run build && standard-version"
+    "release": "rm -rf ./dist; npm run build && git add -A && standard-version"
   },
   "repository": {
     "type": "git",
