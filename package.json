@@ -1,6 +1,6 @@
 {
   "name": "@ecomplus/netlify-cms-widgets",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Collection of Netlify CMS widgets for storefront",
   "private": true,
   "main": "dist/main.js",
@@ -29,6 +29,7 @@
   "homepage": "https://github.com/ecomclub/netlify-cms-widgets#readme",
   "dependencies": {
     "@babel/runtime": "^7.5.5",
+    "@pake/react-color": "^3.0.0",
     "core-js": "^3.2.1",
     "create-react-class": "^15.6.3",
     "netlify-cms": "^2.9.7",
