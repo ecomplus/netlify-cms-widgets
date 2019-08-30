@@ -1,0 +1,62 @@
+{
+  "name": "@ecomplus/netlify-cms-widgets",
+  "version": "0.1.0",
+  "description": "Collection of Netlify CMS widgets for storefront",
+  "private": true,
+  "main": "dist/main.js",
+  "browser": "dist/main.js",
+  "jsdelivr": "dist/main.js",
+  "unpkg": "dist/main.js",
+  "scripts": {
+    "build": "NODE_ENV=production webpack",
+    "serve": "webpack-dev-server",
+    "release": "rm -rf ./dist; npm run build && standard-version"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ecomclub/netlify-cms-widgets.git"
+  },
+  "keywords": [
+    "netlify-cms",
+    "storefront",
+    "ecomplus"
+  ],
+  "author": "E-Com Club <ti@e-com.club>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ecomclub/netlify-cms-widgets/issues"
+  },
+  "homepage": "https://github.com/ecomclub/netlify-cms-widgets#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.5.5",
+    "core-js": "^3.2.1",
+    "create-react-class": "^15.6.3",
+    "netlify-cms": "^2.9.7",
+    "netlify-cms-widget-color": "^3.0.1",
+    "react": "^16.9.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-transform-runtime": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "babel-loader": "^8.0.6",
+    "husky": "^3.0.4",
+    "standard": "^14.1.0",
+    "standard-version": "^7.0.0",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "browserslist": [
+    "last 1 version",
+    "not dead",
+    "> 0.2%"
+  ]
+}
