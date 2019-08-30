@@ -10,7 +10,7 @@
   "scripts": {
     "build": "NODE_ENV=production webpack",
     "serve": "webpack-dev-server",
-    "release": "rm -rf ./dist; npm run build && git add -A && standard-version"
+    "release": "rm -rf ./dist; npm run build && git add -A && git commit -m 'chore: dist' && standard-version"
   },
   "repository": {
     "type": "git",
