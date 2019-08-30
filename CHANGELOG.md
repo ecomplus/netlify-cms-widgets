@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/ecomclub/netlify-cms-widgets/compare/v0.1.1...v1.0.0) (2019-08-30)
+
+
+### Bug Fixes
+
+* **main:** importing source js file for collections widget ([587a4fa](https://github.com/ecomclub/netlify-cms-widgets/commit/587a4fa))
+
 ### 0.1.1 (2019-08-30)
 
 
