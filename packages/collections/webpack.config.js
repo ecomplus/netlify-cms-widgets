@@ -37,11 +37,29 @@ const productionConfig = {
     rules: [
       {
         test: /\.jsx?$/,
-        loader: 'babel-loader',
-      },
-    ],
+        loader: 'babel-loader'
+      }
+    ]
   },
   devtool: 'source-map',
+  output: {
+    library: '__ecom_netlify_cms_collections',
+    libraryTarget: 'umd',
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'main.js'
+  },
+  externals: {
+    'netlify-cms': {
+      commonjs: 'netlify-cms',
+      commonjs2: 'netlify-cms',
+      root: 'CMS'
+    },
+    react: {
+      commonjs: 'react',
+      commonjs2: 'react',
+      root: 'React'
+    }
+  }
 }
 
 module.exports = process.env.NODE_ENV === 'production' ? productionConfig : developmentConfig
