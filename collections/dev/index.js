@@ -1,8 +1,7 @@
 import './bootstrap.js'
 import CMS, { init } from 'netlify-cms'
 import 'netlify-cms/dist/cms.css'
-import { Control, Preview } from '../src'
-
+import { CollectionsControl, CollectionsPreview } from '../src'
 const config = {
   backend: {
     name: 'test-repo',
@@ -23,6 +22,6 @@ const config = {
   }],
 }
 
-CMS.registerWidget('test', Control, Preview)
+CMS.registerWidget('test', CollectionsControl, CollectionsPreview)
 
 init({ config })

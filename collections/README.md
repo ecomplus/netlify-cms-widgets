@@ -7,7 +7,7 @@ npm install --save netlify-cms-widget-ecomplus-collections
 ```
 
 ```js
-import youtube from "netlify-cms-widget-ecomplus-collections";
+import {collectionsControl, collectionsPreview} from "netlify-cms-widget-ecomplus-collections";
 
 CMS.registerWidget("collections", collectionsControl, collectionsPreview);
 ```

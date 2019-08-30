@@ -94,56 +94,59 @@ export default class Preview extends React.Component {
   }
 
   render() {
-    let ulStyle = {
-      position: 'relative',
-      width: '100%',
-      listStyle: 'none',
-      padding: 0,
-      whiteSpace: 'nowrap',
-      display: 'flex',
-      flexWrap: 'nowrap',
-      willChange: 'transform',
-    }
-    let liStyle = {
-      width: '270px',
-      marginRight: '5px',
-      flexShrink: 0,
-      whiteSpace: 'normal'
-    }
-    let spanPicStyle = {
-      display: 'flex',
-      height: '250px',
-      alignItems: 'center',
-      textAlign: 'center',
-      overflow: 'hidden'
-    }
-    let productNameStyle = {
-      marginTop: '.5rem',
-      fontSize: '.88rem',
-      lineHeight: '1.2',
-      height: '3.168rem',
-      overflow: 'hidden',
-      fontWeight: '400',
-      display: 'block',
-      zIndex: '1'
-    }
+    let styles = {
+      ul: {
+        position: 'relative',
+        width: '100%',
+        listStyle: 'none',
+        padding: 0,
+        whiteSpace: 'nowrap',
+        display: 'flex',
+        flexWrap: 'nowrap',
+        willChange: 'transform',
+      },
+      li: {
+        width: '270px',
+        marginRight: '5px',
+        flexShrink: 0,
+        whiteSpace: 'normal'
+      },
+      span: {
+        display: 'flex',
+        height: '250px',
+        alignItems: 'center',
+        textAlign: 'center',
+        overflow: 'hidden'
+      },
+      product_name: {
+        marginTop: '.5rem',
+        fontSize: '.88rem',
+        lineHeight: '1.2',
+        height: '3.168rem',
+        overflow: 'hidden',
+        fontWeight: '400',
+        display: 'block',
+        zIndex: '1'
+      }
+    };
+    
     const colletionProducts = this.state.collectionsItems.map((collection) =>
-      <li style={liStyle}>
+      <li style={styles.li}>
         <div style={{ padding: '1rem' }}>
           <a>
-            <span style={spanPicStyle}>
+            <span style={styles.span}>
               <span>
                 <img src={collection.pictures[0].normal.url} />
               </span>
             </span>
-            <h3 style={productNameStyle}>{collection.name}</h3>
+            <h3 style={styles.product_name}>{collection.name}</h3>
           </a>
         </div>
       </li >
     )
 
     return (
-      <div id={this.props.value} > <ul style={ulStyle}>{colletionProducts}</ul></div>
+      <div id={this.props.value} > <ul style={styles.ul}>{colletionProducts}</ul></div>
     )
   }
 }

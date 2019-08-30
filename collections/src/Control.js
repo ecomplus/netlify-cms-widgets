@@ -16,11 +16,11 @@ export default class Control extends React.Component {
     forID: PropTypes.string,
     value: PropTypes.node,
     classNameWrapper: PropTypes.string.isRequired,
-  }
+  };
 
   static defaultProps = {
     value: '',
-  }
+  };
 
   componentDidMount() {
     const API_COLLETIONS_PATH = 'https://api.e-com.plus/v1/collections.json'
